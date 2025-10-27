@@ -1,0 +1,35 @@
+📈 Initial Training Performance (img1.png)The first set of graphs (img1.
+png) shows the model's performance over 20 epochs during its initial 
+training phase.Loss: The training loss ($\text{train\_loss}$) starts 
+high ($\approx 0.65$) and generally decreases, but with significant 
+volatility (spikes near epochs 14 and 17), suggesting potentially a 
+high learning rate or small batch size. The validation loss ($\text
+{val\_loss}$) shows a smoother, more gradual decrease, stabilizing 
+around $\mathbf{0.22}$ by the end. The final Validation loss is $0.
+2148$.Accuracy: The training accuracy ($\text{train\_acc}$) is highly
+ erratic, peaking close to $\mathbf{0.96}$ but also dropping below $0.
+ 85$. The validation accuracy ($\text{val\_acc}$) is much smoother and 
+ gradually increases, peaking around $\mathbf{0.93}$ and staying 
+ relatively stable. The final Validation accuracy is $0.9329$.Observation: The high fluctuation in training metrics compared to the 
+ smoother validation metrics suggests the model is still finding its 
+ optimal weights and might benefit from techniques like learning rate 
+ scheduling or a more stable optimization strategy.🚀 Fine-Tuning 
+ Performance (img2.png)The second set of graphs (img2.png) likely 
+ represents a fine-tuning stage of the same model, focusing on the last 
+ 15 epochs.Loss: Both the training loss ($\text{train\_loss}$) and 
+ validation loss ($\text{val\_loss}$) show a clearer trend of 
+ decreasing loss. The $\text{train\_loss}$ drops consistently, ending 
+ near $\mathbf{0.07}$, while the $\text{val\_loss}$ hovers between $0.
+ 20$ and $0.35$ initially before stabilizing around $0.22$ in the final 
+ epochs. The final Fine-tuned Validation loss is $0.2174$.Accuracy: 
+ Both accuracies increase. The training accuracy ($\text{train\_acc}$) 
+ shows high performance and volatility, peaking above $0.97$ toward the
+  end. The validation accuracy ($\text{val\_acc}$) shows a marked 
+  improvement over the initial training, increasing from $0.90$ to 
+  approximately $0.94$ and remaining stable. The final Validation accuracy is $0.9388$.Observation: The significant gap between $\text
+  {train\_loss}$ and $\text{val\_loss}$ and between $\text{train\_acc}$ 
+  and $\text{val\_acc}$ (especially noticeable in later epochs of 
+  fine-tuning) indicates the model is overfitting the training data. 
+  However, the validation accuracy shows a slight overall improvement 
+  from $0.9329$ (initial training) to $0.9388$ (fine-tuning), which is 
+  the primary goal.
