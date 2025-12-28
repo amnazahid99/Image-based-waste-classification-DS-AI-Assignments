@@ -1,0 +1,23 @@
+# ======================================================
+# WEEK 13 — MODEL DEPLOYMENT (Gradio)
+# ======================================================
+
+import gradio as gr
+import numpy as np
+
+def dummy_predict(img):
+    return {
+        "plastic": 0.5,
+        "glass": 0.2,
+        "metal": 0.1,
+        "paper": 0.1,
+        "cardboard": 0.05,
+        "trash": 0.05
+    }
+
+gr.Interface(
+    fn=dummy_predict,
+    inputs=gr.Image(type="pil"),
+    outputs=gr.Label(),
+    title="Waste Classification Demo"
+).launch()
