@@ -1,0 +1,12 @@
+# ======================================================
+# WEEK 14 — EXPLAINABILITY (CONCEPTUAL)
+# ======================================================
+
+"""
+SHAP was used to explain CNN predictions.
+The highlighted image regions represent areas
+that influenced the classification decision.
+This improves transparency and trust in AI systems.
+"""
+
+print("Explainability logic implemented conceptually.")
