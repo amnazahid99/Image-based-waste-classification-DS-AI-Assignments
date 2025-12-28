@@ -1,0 +1,33 @@
+# ======================================================
+# WEEK 11 — NLP PREPROCESSING
+# ======================================================
+
+import nltk
+import re
+from nltk.corpus import stopwords
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+nltk.download("stopwords")
+nltk.download("punkt")
+
+documents = [
+    "Plastic waste harms the environment",
+    "Glass can be recycled many times",
+    "Metal waste is valuable",
+]
+
+stop_words = set(stopwords.words("english"))
+
+def clean_text(text):
+    text = text.lower()
+    text = re.sub(r"[^a-z ]", "", text)
+    tokens = text.split()
+    tokens = [t for t in tokens if t not in stop_words]
+    return " ".join(tokens)
+
+cleaned_docs = [clean_text(doc) for doc in documents]
+
+vectorizer = TfidfVectorizer()
+X = vectorizer.fit_transform(cleaned_docs)
+
+print("TF-IDF Shape:", X.shape)
