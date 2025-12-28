@@ -1,37 +1,55 @@
-# ♻️ Image-Based Waste Classification (Weeks 1–8)
+# ♻️ Image-Based Waste Classification (Weeks 1–15)
 
 **Student:** Amna Zahid  
-**Course:** Data Science & AI (BSSE 7th Semester)  
-**Project:** Image-Based Waste Classification (Midterm Portion)
+**Course:** Data Science & Artificial Intelligence (BSSE 7th Semester)  
+**Project:** Image-Based Waste Classification  
+**Status:** Final Project (Weeks 1–15 Completed)
 
 ---
 
 ## 📘 Project Overview
 
-This project focuses on **automatic waste classification** using deep learning and transfer learning.  
-It classifies waste images into **10 categories**:  
+This project focuses on **automatic waste classification** using **Data Science and Artificial Intelligence techniques**, progressing from basic data handling to deep learning, deployment, explainability, and final reporting.
+
+The system classifies waste images into multiple categories such as:  
 `battery`, `biological`, `cardboard`, `clothes`, `glass`, `metal`, `paper`, `plastic`, `shoes`, and `trash`.
 
-The model is based on **MobileNetV2**, a lightweight convolutional neural network optimized for computer vision tasks.  
-It was first trained with frozen layers and later fine-tuned to improve accuracy.  
-Finally, a **Gradio web interface** was built to test the model interactively.
+The project gradually evolves from **data preprocessing and classical ML** to **CNN-based deep learning**, **model deployment**, and **explainable AI**, following a strict **week-by-week academic roadmap**.
 
 ---
 
 ## 🗂️ Dataset Information
 
-This project uses the **Garbage Classification Dataset**, containing **10 waste categories** and over **25,000 labeled images**.  
-Due to **GitHub’s file size limit (~740 MB total)**, the full dataset could not be uploaded.  
+- **Dataset:** Garbage Classification Dataset  
+- **Source:** Kaggle  
+- **Total Images:** 25,000+  
+- **Categories:** 10 waste classes  
 
-Instead, a smaller **`test_images.zip`** file is included — it contains representative images from multiple categories used for testing and demonstration.  
+Due to **GitHub file size limitations**, the full dataset is not uploaded.
 
-📥 You can download the **original Garbage Dataset** directly from **[Kaggle](https://www.kaggle.com/datasets/mostafaabla/garbage-classification)** and place it in the same path used in the notebook for full model training.
+📥 Download the original dataset from Kaggle:  
+https://www.kaggle.com/datasets/mostafaabla/garbage-classification
+
+A smaller **`test_images.zip`** file is included for demonstration and testing.
 
 ---
 
-## 🧠 Run the Notebook
+## 🧠 Technologies & Tools Used
 
-Open the notebook in Jupyter:
+- Python
+- NumPy, Pandas, Matplotlib, Seaborn
+- Scikit-learn
+- TensorFlow / Keras
+- MobileNetV2 (Transfer Learning)
+- Gradio (Deployment)
+- SHAP (Explainable AI)
+- Git & GitHub
+
+---
+
+## 🚀 How to Run the Project (Weeks 1–8)
+
+Open the main notebook:
 
 ```bash
 DSAI waste classification project.ipynb
@@ -39,93 +57,124 @@ DSAI waste classification project.ipynb
 
 Run all cells sequentially to:
 
-1. Load and preprocess the dataset
+- Load and preprocess the dataset
 
-2. Train and fine-tune MobileNetV2
+- Train CNN using MobileNetV2
 
-3. Evaluate model performance
+- Fine-tune the model
 
-4. Generate results and plots
+- Evaluate performance
 
-# 🚀 Launch the Gradio App
+- Test predictions
 
-At the final step, the Gradio interface is created:
-```python
+- Launch Gradio interface
+
+Launch Gradio App
 demo.launch(share=True)
-```
 
-Once it runs, open the public link (ending with .gradio.live) to test your model online.
+## 📊 Model Performance (CNN)
 
-# 📊 Model Performance
+- Metric	Result
+- Validation Accuracy (Before Fine-Tuning)	93.29%
+- Validation Accuracy (After Fine-Tuning)	93.88%
+- Validation Loss	0.217
+- Model Used	MobileNetV2 (Transfer Learning)
 
+## ✅ Features Implemented
 
-| Metric                                   | Result                          |
-|------------------------------------------|---------------------------------|
-| Validation Accuracy (before fine-tuning) | 93.29%                          |
-| Validation Accuracy (after fine-tuning)  | 93.88%                          |
-| Validation Loss                          | 0.217                           |
-| Model Used                               | MobileNetV2 (Transfer Learning) |
+- Dataset preprocessing & augmentation
 
+- CNN with MobileNetV2 backbone
 
-# ✅ Features Implemented
+- Transfer learning & fine-tuning
 
-1. Dataset preprocessing & augmentation
+- Model evaluation & visualization
 
-2. CNN with MobileNetV2 backbone
+- Unsupervised learning (K-Means + PCA)
 
-3. Training & validation (with callbacks)
+- ANN baseline model
 
-4. Fine-tuning of last 50 layers
+- NLP preprocessing (TF-IDF demo)
 
-5. Evaluation (accuracy, loss, confusion matrix)
+- Model deployment (without Flask)
 
-6. Interactive Gradio web app
+- Explainable AI using SHAP
 
-7. Final PDF report
+- Industry case study & ethics analysis
 
-   # 📅 Weekly Breakdown (Weeks 1–8)
+## 📅 Weekly Breakdown (Weeks 1–15)
 
+Week	Focus Area	Key Outcome
+1. 	Orientation & setup	Environment & repo setup
+2. 	Data collection & cleaning	Cleaned dataset
+3. 	Data visualization	EDA & plots
+4. 	Statistics & probability	Feature understanding
+5. 	Supervised learning (Regression)	Baseline model
+6. 	Supervised learning (Classification)	RF & Logistic Regression
+7. 	Model evaluation	Precision, Recall, F1
+8. 	Unsupervised learning	K-Means + PCA
+9. 	Neural Networks (ANN)	ANN baseline model
+10.   Advanced Deep Learning	CNN with MobileNetV2
+11.   NLP preprocessing	Tokenization & TF-IDF
+12.	Industry case study	Real-world application
+13.	Model deployment	Gradio-based deployment
+14.	Ethics & explainability	SHAP explainability
+15.	Project finalization	Report & GitHub ready
 
-| Week | Focus                                    | Output                    |
-|------|------------------------------------------|---------------------------|
-| 1    | Dataset setup & exploration              | Folder structure verified |
-| 2    | Image preprocessing & augmentation       | Created generators        |
-| 3    | Model creation (MobileNetV2 base)        | Compiled model            |
-| 4    | Initial training with frozen base        | Checkpoints saved         |
-| 5    | Model evaluation & visualization         | Accuracy/loss plots       |
-| 6    | Fine-tuning top layers                   | Accuracy ↑ to 93.88%      |
-| 7    | Testing on unseen images                 | Verified predictions      |
-| 8    | Deployment using Gradio                  | Live model demo           |
+## 🧪 Testing
 
+- Extract test_images.zip
 
-   # 🧪 Testing
+- Place it in the specified directory
 
-- Extract test_images.zip.
-  
-- Place it in week1-8/test_images/.
-  
-- Run the prediction cell or open the Gradio app, then upload an image.
-  
-- The model displays the predicted category and confidence score.
+- Run prediction cells or upload images in Gradio UI
 
-# 📝 Note for Instructor
+- View predicted class and confidence
 
-The complete training dataset is not uploaded due to GitHub’s size limits.
-Instead, test_images.zip provides multiple samples to demonstrate model predictions.
-The notebook, model, and Gradio app collectively represent the full project for Weeks 1–8 (Midterm Portion).
+## ⚖️ Ethics & Explainability (Week 14)
 
-# 📚 References
+1. SHAP used to explain CNN predictions
 
-1. TensorFlow / Keras Documentation
+2. Highlighted influential image regions
 
-2. MobileNetV2 Paper (Google AI)
+3. Addressed dataset bias and misclassification risks
 
-3. Kaggle: Garbage Classification Dataset
+4. Emphasized transparency and responsible AI use
 
-4. Gradio Documentation
+## 📝 Note for Instructor
 
-# GitHub Repository:
+Due to GitHub storage limits, the full dataset is not uploaded.
+However, the repository includes:
+
+- All weekly notebooks/scripts
+
+- Model files
+
+- Deployment and explainability code
+
+- Industry case study
+
+- Final project structure
+
+This repository represents the complete solo project (Weeks 1–15) as required by the course.
+
+## 📚 References
+
+- TensorFlow & Keras Documentation
+
+- MobileNetV2 Research Paper (Google AI)
+
+- Kaggle – Garbage Classification Dataset
+
+- Gradio Documentation
+
+- Interpretable Machine Learning – Christoph Molnar
+
+## 🔗 GitHub Repository
+
 https://github.com/amnazahid99/Image-based-waste-classification-DS-AI-Assignments
 
-Created by: Amna Zahid
-
+**Created By:** Amna Zahid  
+**Degree Program:**  BS Software Engineering 
+---
+DSAI waste classification project.ipynb
